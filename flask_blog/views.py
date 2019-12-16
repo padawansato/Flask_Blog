@@ -26,5 +26,5 @@ def login():
 
 @app.route('/logout')
 def logout():
-    session.pop('logged_in', None)
+    session.pop('logged_in', None) #ログインしていないならリダイレクト
     return redirect('/')
